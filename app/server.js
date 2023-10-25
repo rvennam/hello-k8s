@@ -15,7 +15,8 @@ var port = process.env.PORT || 8080;
 var message = process.env.MESSAGE || "Hello world!";
 
 app.get('/', function (req, res) {
-    res.render('home', createResponseObject());
+    //res.render('home', createResponseObject());
+    res.end(message + ". Running on " + os.hostname() + "\n")
 });
 
 app.get('/api', function (req, res) {
